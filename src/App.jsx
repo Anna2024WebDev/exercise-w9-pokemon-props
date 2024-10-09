@@ -11,10 +11,25 @@ https://reactjs.org/docs/lists-and-keys.html
 Feel free to create more components, such as header/footer,
 or why not include some more data from the array? */
 
+import "./styles.css"
+
+// import data from "./data.json"
+
+import { pokemons } from "./data.json"
+import { Pokemon } from "./components/Pokemon"
+import Header from "./components/Header";
+import './components/styling/header.css';
+
+
 export const App = () => {
+  console.log("pokemon", pokemons)
   return (
-    <div className="App">
-      <p>Pokemon goes here</p>
-    </div>
-  );
-};
+    <>
+      <Header />
+      <Pokemon />
+
+    </>
+  )
+}
+
+

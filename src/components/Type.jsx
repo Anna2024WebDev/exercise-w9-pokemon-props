@@ -1,4 +1,10 @@
-// Destructure pokemon types props here :)
-export const Type = () => {
-  return <div>Type</div>;
-};
+
+export const Type = ({ types }) => {
+  return (
+    <div>
+      {types.map((type, index) => (
+        <div key={index}>{type}</div>
+      ))}
+    </div>
+  )
+}
